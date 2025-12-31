@@ -1,0 +1,178 @@
+Decoded text: The United  Arab Emirates (UAE)'s) role in computingAlthough this element
+
+Timing Information:
+Total time: 5.6191 seconds
+Seconds per token: 0.4014
+
+Alpha (α) = 0.8238
+Number of beta measurements: 40
+Number of accepted tokens: 5
+
+====================================================================================================
+TOKEN ANALYSIS
+====================================================================================================
+
+====================================================================================================
+ALL TOKENS (ACCEPTED & REJECTED) ANALYSIS (Total: 40, Showing: 40)
+Sort by: position
+====================================================================================================
+
+[1] Position:    2 | Beta: 0.9397 | Status: ✓ ACCEPTED
+    Token IDs: [464, 1578, 4498]
+    Text: 'The United Arab'
+
+[2] Position:    3 | Beta: 0.0007 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 54]
+    Text: 'The United ArabW'
+
+[3] Position:    4 | Beta: 0.0203 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 54, 464]
+    Text: 'The United ArabWThe'
+
+[4] Position:    4 | Beta: 0.3976 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 383]
+    Text: 'The United Arab Emirates The'
+
+[5] Position:    5 | Beta: 0.0318 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 54, 464, 17013]
+    Text: 'The United ArabWTheUnited'
+
+[6] Position:    5 | Beta: 0.0211 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 383, 17013]
+    Text: 'The United Arab Emirates TheUnited'
+
+[7] Position:    5 | Beta: 0.1488 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 41126]
+    Text: 'The United Arab Emirates (Gh'
+
+[8] Position:    6 | Beta: 0.0176 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 54, 464, 17013, 464]
+    Text: 'The United ArabWTheUnitedThe'
+
+[9] Position:    6 | Beta: 0.0101 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 383, 17013, 464]
+    Text: 'The United Arab Emirates TheUnitedThe'
+
+[10] Position:    6 | Beta: 0.0076 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 41126, 464]
+    Text: 'The United Arab Emirates (GhThe'
+
+[11] Position:    6 | Beta: 0.9436 | Status: ✓ ACCEPTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242]
+    Text: 'The United Arab Emirates (UAE'
+
+[12] Position:    7 | Beta: 0.0280 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 383, 17013, 464, 464]
+    Text: 'The United Arab Emirates TheUnitedTheThe'
+
+[13] Position:    7 | Beta: 0.0019 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 41126, 464, 464]
+    Text: 'The United Arab Emirates (GhTheThe'
+
+[14] Position:    7 | Beta: 0.0030 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 464]
+    Text: 'The United Arab Emirates (UAEThe'
+
+[15] Position:    8 | Beta: 0.0256 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 383, 17013, 464, 464, 464]
+    Text: 'The United Arab Emirates TheUnitedTheTheThe'
+
+[16] Position:    8 | Beta: 0.0012 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 41126, 464, 464, 464]
+    Text: 'The United Arab Emirates (GhTheTheThe'
+
+[17] Position:    8 | Beta: 0.0038 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 464, 464]
+    Text: 'The United Arab Emirates (UAETheThe'
+
+[18] Position:    8 | Beta: 0.7401 | Status: ✓ ACCEPTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82]
+    Text: 'The United Arab Emirates (UAE)'s'
+
+[19] Position:    9 | Beta: 0.0078 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 41126, 464, 464, 464, 464]
+    Text: 'The United Arab Emirates (GhTheTheTheThe'
+
+[20] Position:    9 | Beta: 0.0020 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 464, 464, 464]
+    Text: 'The United Arab Emirates (UAETheTheThe'
+
+[21] Position:    9 | Beta: 0.0203 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 464]
+    Text: 'The United Arab Emirates (UAE)'sThe'
+
+[22] Position:   10 | Beta: 0.0032 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 464, 464, 464, 464]
+    Text: 'The United Arab Emirates (UAETheTheTheThe'
+
+[23] Position:   10 | Beta: 0.0034 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 464, 464]
+    Text: 'The United Arab Emirates (UAE)'sTheThe'
+
+[24] Position:   10 | Beta: 0.5058 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 1363]
+    Text: 'The United Arab Emirates (UAE)'s) home'
+
+[25] Position:   11 | Beta: 0.0092 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 464, 464, 464]
+    Text: 'The United Arab Emirates (UAE)'sTheTheThe'
+
+[26] Position:   11 | Beta: 0.0666 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 1363, 18843]
+    Text: 'The United Arab Emirates (UAE)'s) homeOper'
+
+[27] Position:   11 | Beta: 0.7679 | Status: ✓ ACCEPTED
+    Token IDs: [1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 2597, 287]
+    Text: ' United Arab Emirates (UAE)'s) role in'
+
+[28] Position:   12 | Beta: 0.0860 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 464, 464, 464, 383]
+    Text: 'The United Arab Emirates (UAE)'sTheTheThe The'
+
+[29] Position:   12 | Beta: 0.0068 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 1363, 18843, 464]
+    Text: 'The United Arab Emirates (UAE)'s) homeOperThe'
+
+[30] Position:   12 | Beta: 0.0297 | Status: ✗ REJECTED
+    Token IDs: [1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 464]
+    Text: ' United Arab Emirates (UAE)'s) role inThe'
+
+[31] Position:   13 | Beta: 0.0217 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 1363, 18843, 464, 43093]
+    Text: 'The United Arab Emirates (UAE)'s) homeOperTheOpening'
+
+[32] Position:   13 | Beta: 0.0058 | Status: ✗ REJECTED
+    Token IDs: [1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 464, 464]
+    Text: ' United Arab Emirates (UAE)'s) role inTheThe'
+
+[33] Position:   13 | Beta: 0.3698 | Status: ✗ REJECTED
+    Token IDs: [24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 14492, 25062]
+    Text: ' Emirates (UAE)'s) role in computing Pulse'
+
+[34] Position:   14 | Beta: 0.1618 | Status: ✗ REJECTED
+    Token IDs: [464, 1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 1363, 18843, 464, 43093, 464]
+    Text: 'The United Arab Emirates (UAE)'s) homeOperTheOpeningThe'
+
+[35] Position:   14 | Beta: 0.0540 | Status: ✗ REJECTED
+    Token IDs: [1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 464, 464, 464]
+    Text: ' United Arab Emirates (UAE)'s) role inTheTheThe'
+
+[36] Position:   14 | Beta: 0.1473 | Status: ✗ REJECTED
+    Token IDs: [24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 14492, 25062, 464]
+    Text: ' Emirates (UAE)'s) role in computing PulseThe'
+
+[37] Position:   14 | Beta: 0.7278 | Status: ✓ ACCEPTED
+    Token IDs: [357, 52, 14242, 33047, 82, 8, 2597, 287, 14492, 7003, 428]
+    Text: ' (UAE)'s) role in computingAlthough this'
+
+[38] Position:   15 | Beta: 0.1420 | Status: ✗ REJECTED
+    Token IDs: [1578, 4498, 24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 464, 464, 464, 357]
+    Text: ' United Arab Emirates (UAE)'s) role inTheTheThe ('
+
+[39] Position:   15 | Beta: 0.0053 | Status: ✗ REJECTED
+    Token IDs: [24880, 357, 52, 14242, 33047, 82, 8, 2597, 287, 14492, 25062, 464, 464]
+    Text: ' Emirates (UAE)'s) role in computing PulseTheThe'
+
+[40] Position:   15 | Beta: 0.0040 | Status: ✗ REJECTED
+    Token IDs: [357, 52, 14242, 33047, 82, 8, 2597, 287, 14492, 7003, 428, 464]
+    Text: ' (UAE)'s) role in computingAlthough thisThe'
