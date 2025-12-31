@@ -64,33 +64,79 @@ def plot_beta_histogram(beta_analysis, only_accepted=True, title=None, save_path
     
     Args:
         beta_analysis: List of dicts with 'beta' and 'accepted' keys
-        only_accepted: If True, only plot β values for accepted tokens
+        only_accepted: If True, only plot β values for accepted tokens.
+                       If False, plot both accepted (green) and rejected (red) tokens.
         title: Optional custom title for the plot
         save_path: Optional path to save the figure (e.g., 'beta_hist.png')
     
     Returns:
         tuple: (fig, ax) matplotlib figure and axis objects
     """
-    # Extract beta values
-    if only_accepted:
-        betas = [entry['beta'] for entry in beta_analysis if entry.get('accepted', False)]
-        default_title = 'Beta Distribution (Accepted Tokens Only)'
-    else:
-        betas = [entry['beta'] for entry in beta_analysis]
-        default_title = 'Beta Distribution (All Draft Positions)'
-    
-    if not betas:
-        print("No beta values to plot!")
-        return None, None
-    
     # Create bins at 0.1 intervals: [0.0, 0.1), [0.1, 0.2), ..., [0.9, 1.0]
     bins = np.arange(0.0, 1.1, 0.1)
     
     # Create figure
     fig, ax = plt.subplots(figsize=(10, 6))
     
-    # Plot histogram
-    counts, bin_edges, patches = ax.hist(betas, bins=bins, edgecolor='black', alpha=0.7, color='steelblue')
+    if only_accepted:
+        # Plot only accepted tokens
+        betas = [entry['beta'] for entry in beta_analysis if entry.get('accepted', False)]
+        default_title = 'Beta Distribution (Accepted Tokens Only)'
+        
+        if not betas:
+            print("No accepted beta values to plot!")
+            return None, None
+        
+        counts, bin_edges, patches = ax.hist(betas, bins=bins, edgecolor='black', 
+                                             alpha=0.7, color='steelblue', label='Accepted')
+        
+        # Add statistics text box
+        alpha_value = sum(betas) / len(betas)
+        stats_text = f'α = {alpha_value:.4f}\nN = {len(betas)}\nMin = {min(betas):.4f}\nMax = {max(betas):.4f}'
+        ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, 
+                verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5),
+                fontsize=10, family='monospace')
+        
+        # Add percentage labels on top of bars
+        for count, edge in zip(counts, bin_edges[:-1]):
+            if count > 0:
+                percentage = 100 * count / len(betas)
+                ax.text(edge + 0.05, count, f'{percentage:.1f}%', 
+                       ha='center', va='bottom', fontsize=9)
+    else:
+        # Plot both accepted and rejected tokens with different colors
+        betas_accepted = [entry['beta'] for entry in beta_analysis if entry.get('accepted', False)]
+        betas_rejected = [entry['beta'] for entry in beta_analysis if not entry.get('accepted', False)]
+        default_title = 'Beta Distribution (Accepted vs Rejected Tokens)'
+        
+        if not betas_accepted and not betas_rejected:
+            print("No beta values to plot!")
+            return None, None
+        
+        # Plot stacked histogram with different colors
+        betas_list = [betas_accepted, betas_rejected] if betas_accepted and betas_rejected else ([betas_accepted] if betas_accepted else [betas_rejected])
+        colors = ['green', 'red']
+        labels = ['Accepted', 'Rejected']
+        
+        counts, bin_edges, patches = ax.hist(betas_list, bins=bins, edgecolor='black', 
+                                             alpha=0.6, color=colors[:len(betas_list)], 
+                                             label=labels[:len(betas_list)], stacked=True)
+        
+        # Add statistics text box
+        all_betas = betas_accepted + betas_rejected
+        alpha_accepted = sum(betas_accepted) / len(betas_accepted) if betas_accepted else 0.0
+        alpha_rejected = sum(betas_rejected) / len(betas_rejected) if betas_rejected else 0.0
+        
+        stats_text = f'Accepted: N={len(betas_accepted)}\n'
+        stats_text += f'Rejected: N={len(betas_rejected)}\n'
+        stats_text += f'Overall: N={len(all_betas)}'
+        
+        ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, 
+                verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5),
+                fontsize=10, family='monospace')
+        
+        # Add legend
+        ax.legend(loc='upper right', fontsize=10)
     
     # Add labels and title
     ax.set_xlabel('Beta (β) - Acceptance Probability', fontsize=12)
@@ -98,20 +144,6 @@ def plot_beta_histogram(beta_analysis, only_accepted=True, title=None, save_path
     ax.set_title(title if title else default_title, fontsize=14, fontweight='bold')
     ax.set_xticks(bins)
     ax.grid(axis='y', alpha=0.3, linestyle='--')
-    
-    # Add statistics text box
-    alpha_value = sum(betas) / len(betas)
-    stats_text = f'α = {alpha_value:.4f}\nN = {len(betas)}\nMin = {min(betas):.4f}\nMax = {max(betas):.4f}'
-    ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, 
-            verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5),
-            fontsize=10, family='monospace')
-    
-    # Add percentage labels on top of bars
-    for count, edge in zip(counts, bin_edges[:-1]):
-        if count > 0:
-            percentage = 100 * count / len(betas)
-            ax.text(edge + 0.05, count, f'{percentage:.1f}%', 
-                   ha='center', va='bottom', fontsize=9)
     
     plt.tight_layout()
     
