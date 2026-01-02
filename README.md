@@ -2,7 +2,10 @@
 ===Repository to explore various optimizations in LLMs===
 
 
-A. Speculative Decoding is a technique usued to accelerate inference in LLMs using smaller LLMs without changing the output probability distribution of the tokens. The low latency of the smaller model combined with accuracy of the larger LLM makes this method very effective. 
+A. Speculative Decoding is a technique usued to accelerate inference in LLMs using smaller LLMs without changing the output probability distribution of the tokens. The low latency of the smaller model combined with accuracy of the larger LLM makes this method very effective. Refer to [1] for more details.
+
+My youtube playlist explaining the paper in extensive detail:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=jwlgo3uE7ltkf1M6&amp;list=PLcr48X88aGHWMlW9_vsNFQGXZtEBIwvQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 In speculative_decoding.py, we have the implementation for the Speculative Decoding Algorithm .
 Experiments:
@@ -21,7 +24,7 @@ B. I have implemented autoregressive decoding with manual handling of KV Cache i
 There are two simple experiments with autoregressive decoding:
 1. Experiment 1: Generating the same set of tokens is much faster with KV Cache.
 2. Experiment 2: Smaller LLMs are faster than larger LLMs
-Next steps: Implement latent KV  Cache and observe speedup 
+3. Next steps: Implement latent KV  Cache and observe speedup 
 
 
 
