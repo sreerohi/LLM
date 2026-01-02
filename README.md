@@ -4,8 +4,8 @@
 
 A. Speculative Decoding is a technique usued to accelerate inference in LLMs using smaller LLMs without changing the output probability distribution of the tokens. The low latency of the smaller model combined with accuracy of the larger LLM makes this method very effective. Refer to [1] for more details.
 
-My youtube playlist explaining the paper in extensive detail:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=jwlgo3uE7ltkf1M6&amp;list=PLcr48X88aGHWMlW9_vsNFQGXZtEBIwvQC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[My youtube playlist explaining the paper in extensive detail]:
+https://youtube.com/playlist?list=PLcr48X88aGHWMlW9_vsNFQGXZtEBIwvQC&si=i7dvYjM3WK-om5wy
 
 In speculative_decoding.py, we have the implementation for the Speculative Decoding Algorithm .
 Experiments:
