@@ -12,8 +12,7 @@ B. I have implemented autoregressive decoding with manual handling of KV Cache i
 There are two simple experiments with autoregressive decoding:
 1. Experiment 1: Generating the same set of tokens is much faster with KV Cache.
 2. Experiment 2: Smaller LLMs are faster than larger LLMs
-
-C. Next steps: Implement latent Cache and observe speedup 
+Next steps: Implement latent KV  Cache and observe speedup 
 
 
 
