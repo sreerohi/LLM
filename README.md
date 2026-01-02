@@ -1,7 +1,10 @@
 # LLM
 ===Repository to explore various optimizations in LLMs===
 
-A. In speculative_decoding.py, we have the implementation for the Speculative Decoding Algorithm .
+
+A. Speculative Decoding is a technique usued to accelerate inference in LLMs using smaller LLMs without changing the output probability distribution of the tokens. The low latency of the smaller model combined with accuracy of the larger LLM makes this method very effective. 
+
+In speculative_decoding.py, we have the implementation for the Speculative Decoding Algorithm .
 Experiments:
 1. Alpha (α) calculation
    <img width="1023" height="275" alt="image" src="https://github.com/user-attachments/assets/78133c86-f2cf-4c36-9ca1-2767aec5afc1" />
@@ -10,6 +13,8 @@ Experiments:
  <img width="1200" height="700" alt="image" src="https://github.com/user-attachments/assets/9ecf0fba-fdd8-410a-8c7d-5b5f8376996d" />
 
 3. Exploring the relation between context and beta values
+ <img width="735" height="579" alt="image" src="https://github.com/user-attachments/assets/d258b913-d8f4-449e-a3c0-efa634d02fa4" />
+
 
    
 B. I have implemented autoregressive decoding with manual handling of KV Cache in autoregressive_decoding.py. 
